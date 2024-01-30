@@ -23,13 +23,15 @@ public class Main {
         }
     }
 
-    public static int[] multiplyArrays(int[] array1, int[] array2) {
+    public static void multiplyArrays(int[] array1, int[] array2) {
         int length = array1.length;
         int[] result = new int[length];
         for (int i = 0; i < length; i++) {
             result[i] = array1[i] * array2[i];
         }
-        return result;
+        for(int i=0;i<length;i++){
+            System.out.println(result[i]+" ");
+        }
     }
 
     public static void bubbleSortAscending(int[] arr) {
@@ -43,6 +45,9 @@ public class Main {
                 }
             }
         }
+        for(int i=0;i<n;i++){
+        System.out.println(arr[i]+" ");
+        }
     }
 
     public static void bubbleSortDescending(int[] arr) {
@@ -55,6 +60,9 @@ public class Main {
                     arr[j + 1] = temp;
                 }
             }
+        }
+        for(int i=0;i<n;i++){
+        System.out.println(arr[i]+" ");
         }
     }
 
@@ -83,8 +91,8 @@ public class Main {
         for (int i = 0; i < size; i++) {
             arr2[i] = sc.nextInt();
         }
-        int[] result = multiplyArrays(arr1, arr2);
-        System.out.println("Multiplication result: " + Arrays.toString(result));
+        multiplyArrays(arr1, arr2);
+        
 
         System.out.println("Enter the size of the array to be sorted: ");
         size = sc.nextInt();
@@ -94,9 +102,9 @@ public class Main {
             arr[i] = sc.nextInt();
         }
         bubbleSortAscending(arr);
-        System.out.println("Ascending Order: " + Arrays.toString(arr));
+      
         bubbleSortDescending(arr);
-        System.out.println("Descending Order: " + Arrays.toString(arr));
+    
         sc.close();
     }
 }
