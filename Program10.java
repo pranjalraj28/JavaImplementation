@@ -2,7 +2,7 @@
 import java.sql.*;
 import java.util.Scanner;
 
-public class App {
+public class Main {
     // JDBC URL, username, and password of MySQL server
     private static final String JDBC_URL = "jdbc:mysql://localhost:3306/student_details";
     private static final String DB_USER = "root";
